@@ -7,6 +7,7 @@ services:
       - "3000:3000"
     volumes:
       - grafana-storage:/var/lib/grafana
+      - ./config/grafana.ini:/etc/grafana/grafana.ini
     networks:
       - grafana
       - shared-network
@@ -28,7 +29,7 @@ services:
     container_name: loki
     restart: unless-stopped
     ports:
-      - 3100:3100
+      - "3100:3100"
     networks:
       - grafana
       - shared-network

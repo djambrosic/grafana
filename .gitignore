@@ -1,2 +1,5 @@
+.vscode
+.idea
 prometheus/prometheus.yml
 .env
+config/grafana.ini
