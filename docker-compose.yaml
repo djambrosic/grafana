@@ -30,12 +30,15 @@ services:
     restart: unless-stopped
     ports:
       - "3100:3100"
+    volumes:
+      - loki-storage:/loki
     networks:
       - grafana
       - shared-network
 
 volumes:
   grafana-storage: {}
+  loki-storage: 
 
 networks:
   grafana:
