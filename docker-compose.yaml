@@ -6,7 +6,7 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - grafana-storage:/var/lib/grafana
+      #      - grafana-storage:/var/lib/grafana
       - ./config/grafana.ini:/etc/grafana/grafana.ini
     networks:
       - grafana
@@ -37,7 +37,7 @@ services:
       - shared-network
 
 volumes:
-  grafana-storage: {}
+  #  grafana-storage: {}
   loki-storage: 
 
 networks:
